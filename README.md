@@ -1,13 +1,23 @@
 # StudyHub
 
+A centralized platform for collaborative learning, and interactive discussions on diverse academic topics.
+
+## Demo
+
+- http://127.0.0.1:8000/
+
+## API
+
+- http://127.0.0.1:8000/api/
+
+
 ## Features
-- A centralized platform for collaborative learning, and interactive discussions on diverse academic topics.
+
+1. 
+2. 
+
 
 ## References
-- Figma Design - 
 
-## TODO
-1. Handle Go Back in browser. (Edge case : when an item is deleted/removed)
-2. Redirect to recent comment, in a room.
-3. Permission for user to modify contents in room.
-4. Admin panel, for dev.
+1. Figma Design - https://www.figma.com/community/file/1087345021099955378/studybuddy
+2. Deployment Platform - https://www.pythonanywhere.com/

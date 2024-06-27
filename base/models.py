@@ -33,6 +33,10 @@ class Message(models.Model):
   updated = models.DateTimeField(auto_now=True)      # auto-update when saved
   created = models.DateTimeField(auto_now_add=True)  # save only in add
 
+  # newest item at the top
+  class Meta:
+    ordering = ['-updated', '-created']
+
   def __str__(self) -> str:
     return self.body[0:50]
 	
