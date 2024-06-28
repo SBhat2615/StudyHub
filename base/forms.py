@@ -1,7 +1,6 @@
 from django.forms import ModelForm
-from .models import Room
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
+from .models import Room, User
+# from django.contrib.auth.models import User
 
 # inherit UserCreationForm ; if directly used display's all field
 # class MyUserCreationForm(UserCreationForm):

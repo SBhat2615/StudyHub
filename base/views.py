@@ -6,8 +6,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required     # decorator to restrict pages
 from django.db.models import Q      # to filter more than 1 condition
 
-from .models import Room, Topic, Message
-from .forms import RoomForm, UserForm, UserCreationForm
+from .models import Room, Topic, Message, User
+from .forms import RoomForm, UserForm
 
 
 # rooms = [
