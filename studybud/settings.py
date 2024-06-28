@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     "corsheaders",       # https://github.com/adamchainz/django-cors-headers
 ]
 
+AUTH_USER_MODEL = "base.User"
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -124,10 +126,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+MEDIA_URL = "images/"       # for user uploaded images
 
+# for standard images & css/js
 STATICFILES_DIRS = [
   BASE_DIR / 'static'
 ]
+
+# for user uploaded content ; use aws in production
+MEDIA_ROOT = BASE_DIR / 'static/images'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

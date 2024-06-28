@@ -5,9 +5,10 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required     # decorator to restrict pages
 from django.db.models import Q      # to filter more than 1 condition
+# from django.contrib.auth.forms import UserCreationForm
 
 from .models import Room, Topic, Message, User
-from .forms import RoomForm, UserForm
+from .forms import RoomForm, UserForm, MyUserCreationForm
 
 
 # rooms = [
@@ -47,10 +48,10 @@ def loginPage(request):
 
 
 def registerPage(request):
-    form = UserCreationForm()
+    form = MyUserCreationForm()
 
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = MyUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)   # just to lowercase (commit=False)
             user.username = user.username.lower()
@@ -121,7 +122,7 @@ def updateUser(request):
   user = request.user
   form = UserForm(instance=user)    # model form defined in forms.py
   if request.method == "POST":
-    form = UserForm(request.POST, instance=user)
+    form = UserForm(request.POST, request.FILES, instance=user)
     if form.is_valid():
       form.save()
       return redirect('user-profile', pk=user.id)

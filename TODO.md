@@ -11,7 +11,11 @@
 - [X] Search bar.
 - [X] Make Topics & Recent Activities component for mobile view.
 - [X] API support (using restframework).
+- [X] Custom user model (DB will be cleared).
+- [ ] Custom avatar for users.
 - [ ] Handle Go Back in browser. (Edge case : when an item is deleted/removed)
+- [ ] Support real-time messaging(sockets).
+- [ ] OTP login.
 - [ ] Host permission to flag/delete comments.
 - [ ] Customise user activity in profile.
 - [ ] Filter comments (oldest/newest).
