@@ -26,21 +26,22 @@ def loginPage(request):
     return redirect('home')
 
   if request.method == "POST":
-    username = request.POST.get('username')
+    email = request.POST.get('email')
     password = request.POST.get('password')
 
     try:
-      user = User.objects.get(username=username)
-    except:
-      messages.error(request, "User does not exist")
+      user = User.objects.get(email=email)
 
-    user = authenticate(request, username=username, password=password)
+    except:
+      messages.error(request, "User doesn't exist")
+
+    user = authenticate(request, email=email, password=password)
 
     if user is not None:
       login(request, user=user)       # creates a session in db & browser
       return redirect('home')
     else:
-      messages.error(request, "Username OR Password does not exist")
+      messages.error(request, "Incorrect Password")
 
   context = {'page': page}
   return render(request, 'base/login_register.html', context)
