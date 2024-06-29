@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-x$e4a1es^=w8bn8i2rc1sn(llw#9673kw@&8+a^aplu_o9-)8s"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'siddharthabhat2615.pythonanywhere.com']
 
 
 # Application definition
@@ -125,16 +126,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
-MEDIA_URL = "images/"       # for user uploaded images
 
-# for standard images & css/js
+STATIC_URL = '/static/'
+
+# SET DEBUG = FALSE IN DEPLOYMENT TO LOAD STATIC FILES FROM STATIC_ROOT
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATICFILES_DIRS = [
-  BASE_DIR / 'static'
+    BASE_DIR / 'static'
 ]
 
-# for user uploaded content ; use aws in production
+
+
+MEDIA_URL = "images/"
+# for user uploaded content 
 MEDIA_ROOT = BASE_DIR / 'static/images'
+
+# IN PRODUCTION USE AWS FOR MEDIA CONTENT
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
