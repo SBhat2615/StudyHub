@@ -132,16 +132,16 @@ STATIC_URL = '/static/'
 # SET DEBUG = FALSE IN DEPLOYMENT TO LOAD STATIC FILES FROM STATIC_ROOT
 if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+else:
+  STATICFILES_DIRS = [
+      BASE_DIR / 'static'
+  ]
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
 
 
-
-MEDIA_URL = "images/"
-# for user uploaded content 
-MEDIA_ROOT = BASE_DIR / 'static/images'
+MEDIA_URL = "/images/"
+# # for user uploaded content 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 
 # IN PRODUCTION USE AWS FOR MEDIA CONTENT
 
