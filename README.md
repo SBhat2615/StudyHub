@@ -1,20 +1,40 @@
-# StudyHub
+<div align="center">
+<!-- <img width="30%" src=""> -->
 
-A centralized platform for collaborative learning, and interactive discussions on diverse academic topics.
+# StudyHub
+</div>
+
+A platform for collaborative learning, and interactive discussions on diverse academic topics.
 
 ## Demo
 
-- http://127.0.0.1:8000/
+- https://siddharthabhat2615.pythonanywhere.com/
 
 ## API
 
-- http://127.0.0.1:8000/api/
+- https://siddharthabhat2615.pythonanywhere.com/api/
 
 
 ## Features
 
-1. 
-2. 
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+  Home Page
+</p>
+<img src="">
+</td> 
+<td width="50%">
+<br>
+<p align="center">
+  Chat Room
+</p>
+<img src="">  
+</td>
+</table>
 
 
 ## References

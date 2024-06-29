@@ -26,6 +26,7 @@
 ### Advanced Sprint
 
 - [ ] Test Cases.
+- [ ] Share images / files.
 - [ ] Customize & Optimize Frontend (angular/react/next).
 - [ ] Optimize search bar.
 - [ ] Flag vulgar comments.  (Detection Algorithms)
