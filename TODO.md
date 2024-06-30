@@ -14,7 +14,7 @@
 - [X] Custom user model (DB will be cleared).
 - [ ] Customise CSS (bootstrap/tailwind) and JS (jquery/view).
 - [ ] Custom avatar for users.
-- [ ] Handle Go Back in browser (Edge case : when an item is deleted/removed).
+- [X] Handle Go Back in browser (Edge case : when an item is deleted/removed)
 - [ ] Support real-time messaging (sockets/django channels).
 - [ ] Host permission to flag/delete comments.
 - [ ] Customise user activity in profile.
@@ -26,8 +26,10 @@
 ### Advanced Sprint
 
 - [ ] Test Cases.
+- [ ] Implement Caching.
 - [ ] Share images / files.
 - [ ] Customize & Optimize Frontend (angular/react/next).
+- [ ] Checkout different databases.
 - [ ] Optimize search bar.
 - [ ] Flag vulgar comments.  (Detection Algorithms)
 - [ ] Recommend rooms to user, based on their interest.  (Recommendation System)
