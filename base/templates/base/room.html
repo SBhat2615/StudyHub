@@ -80,9 +80,9 @@
               <span>@{{room.host.username}}</span>
             </a>
           </div>
-          <!-- <div class="room__details">
+          <div class="room__details">
             {{room.description}}
-          </div> -->
+          </div>
           <span class="room__topics">{{room.topic}}</span>
         </div>
         <div class="room__conversation">
@@ -122,7 +122,7 @@
 
               <!-- actual message -->
               <div class="thread__details">
-                {{message}}
+                {{message.body}}
               </div>
             </div>
             {% endfor %}

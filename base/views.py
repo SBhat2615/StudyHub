@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required     # decorator to restrict pages
 from django.db.models import Q      # to filter more than 1 condition
+from django.urls import reverse
 # from django.contrib.auth.forms import UserCreationForm
 
 from .models import Room, Topic, Message, User
@@ -212,7 +213,7 @@ def deleteMessage(request, pk):
   # TODO: Redirect back to same room.
   if request.method == 'POST':
     message.delete()
-    return redirect('home')
+    return redirect(reverse('room', args=[message.room.id]))
   
   context = {'obj': message}
   return render(request, 'base/delete.html', context)
