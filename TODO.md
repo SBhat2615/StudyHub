@@ -26,6 +26,8 @@
 ### Advanced Sprint
 
 - [ ] Test Cases.
+- [ ] Create a own company profile.
+- [ ] Integrate GPT / Bot.
 - [ ] Implement Caching.
 - [ ] Share images / files.
 - [ ] Customize & Optimize Frontend (angular/react/next).
