@@ -1,29 +1,38 @@
 # TODO
 
-### Basic Sprint
+### Sprint 1
 
 - [X] Create and Delete room.
 - [X] Add Topics & Recent Activities in home page.
 - [X] User login/registration & flash messages.
-- [X] Edit room, user profile.
+- [X] Edit room.
+- [X] Edit user profile.
 - [X] Remove form for Rooms (To handle topic already present).
 - [X] Use a figma design.
 - [X] Search bar.
 - [X] Make Topics & Recent Activities component for mobile view.
 - [X] API support (using restframework).
 - [X] Custom user model (DB will be cleared).
-- [ ] Customise CSS (bootstrap/tailwind) and JS (jquery/view).
-- [ ] Custom avatar for users.
 - [X] Handle Go Back in browser (Edge case : when an item is deleted/removed)
-- [ ] Support real-time messaging (sockets/django channels).
-- [ ] Host permission to flag/delete comments.
+
+
+
+### Sprint 2
+- [ ] Customise CSS (bootstrap/tailwind) and JS (jquery/view).
+- [ ] Edit messages.
+- [ ] OTP login.
+- [ ] Host permission to flag comments.
+- [ ] Custom avatar for users.
 - [ ] Customise user activity in profile.
 - [ ] Filter comments (oldest/newest).
+- [ ] Support real-time messaging (sockets/django channels).
 - [ ] DM / Private Messaging.
-- [ ] OTP login.
+- [ ] Clickable links.
+- [ ] AJAX for update without reload.
 
 
-### Advanced Sprint
+
+### Sprint 3
 
 - [ ] Test Cases.
 - [ ] Create a own company profile.
