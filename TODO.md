@@ -14,18 +14,19 @@
 - [X] API support (using restframework).
 - [X] Custom user model (DB will be cleared).
 - [X] Handle Go Back in browser (Edge case : when an item is deleted/removed)
+- [X] Back to same page after login.
 
 
 
 ### Sprint 2
 - [ ] Customise CSS (bootstrap/tailwind) and JS (jquery/view).
+- [ ] Support real-time messaging (sockets/django channels).
 - [ ] Edit messages.
 - [ ] OTP login.
 - [ ] Host permission to flag comments.
 - [ ] Custom avatar for users.
 - [ ] Customise user activity in profile.
 - [ ] Filter comments (oldest/newest).
-- [ ] Support real-time messaging (sockets/django channels).
 - [ ] DM / Private Messaging.
 - [ ] Clickable links.
 - [ ] AJAX for update without reload.
