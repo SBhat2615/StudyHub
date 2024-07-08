@@ -21,7 +21,12 @@ from .forms import RoomForm, UserForm, MyUserCreationForm
 
 
 def loginPage(request):
+  redirect_to = request.GET.get('next', '')
+  if not redirect_to:
+    redirect_to = 'home'
+    
   page = 'login'
+
   # user already logged in, when goes to login url
   if request.user.is_authenticated:
     return redirect('home')
@@ -40,7 +45,7 @@ def loginPage(request):
 
     if user is not None:
       login(request, user=user)       # creates a session in db & browser
-      return redirect('home')
+      return redirect(redirect_to)
     else:
       messages.error(request, "Incorrect Password")
 
@@ -95,6 +100,10 @@ def room(request, pk):
   participants = room.participants.all()
 
   if request.method == "POST":
+    # print('request - \n\n', request)
+    # print('\n\n', request.user, '\n\n')
+    # if not request.user.is_authenticated:
+    #   return redirect('login')
     message = Message.objects.create(
       user=request.user,
       room=room,

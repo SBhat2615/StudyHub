@@ -134,11 +134,16 @@
 
        <!-- room message form -->
       <div class="room__message">
-        <form method="POST" action="">
-          {% csrf_token %}
-          <input name="body" placeholder="Write your message here..." />
-        </form>
+        {% if request.user.is_authenticated %}
+          <form method="POST" action="">
+            {% csrf_token %}
+            <input name="body" placeholder="Write your message here..." />
+          </form>
+        {% else %}
+          <a href="{% url 'login' %}?next={{request.path}}">Login to continue...</a>
+        {% endif %}
       </div>
+        
 
     </div>
     <!-- Room End -->
