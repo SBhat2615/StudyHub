@@ -21,7 +21,7 @@
       <!-- Logged In -->
       {% if request.user.is_authenticated %}
       <div class="header__user">
-        <a href="{% url 'update-user' %}">
+        <a href="{% url 'user-profile' request.user.id %}">
           <div class="avatar avatar--medium active">
             <img src="{{request.user.avatar.url}}" />
           </div>
@@ -38,7 +38,7 @@
       {% else %}
 
       <!-- Not Logged In -->
-      <a href="{% url 'login' %}">
+      <a href="{% url 'login' %}?next={{request.path}}">
         <img src="{% static 'images/avatar.svg' %}" />
         <p>Login</p>
       </a>
