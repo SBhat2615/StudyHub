@@ -22,7 +22,7 @@
 - [ ] Customise CSS (bootstrap/tailwind) and JS (jquery/view).
 - [ ] Support real-time messaging (sockets/django channels).
 - [ ] Edit messages.
-- [ ] OTP login.
+- [ ] Forgot Password.
 - [ ] Host permission to flag comments.
 - [ ] Custom avatar for users.
 - [ ] Customise user activity in profile.
