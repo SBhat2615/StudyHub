@@ -141,7 +141,7 @@ else:
 
 MEDIA_URL = "/images/"
 # # for user uploaded content 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 # IN PRODUCTION USE AWS FOR MEDIA CONTENT
 

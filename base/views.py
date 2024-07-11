@@ -87,7 +87,7 @@ def home(request):
   )
   topics = Topic.objects.all()[:5]   # display only 5 topics
   room_count = rooms.count()
-  room_messages = Message.objects.filter(Q(room__topic__name__icontains=q))   # see only activities that you filter
+  room_messages = Message.objects.filter(Q(room__topic__name__icontains=q))[:5]   # see only activities that you filter
 
   context = {'rooms': rooms, 'topics': topics, 'room_count': room_count, 'room_messages': room_messages}
   return render(request, 'base/home.html', context)
@@ -208,6 +208,23 @@ def deleteRoom(request, pk):
     room.delete()
     return redirect('home')
   context = {'obj':room}
+  return render(request, 'base/delete.html', context)
+
+
+
+@login_required(login_url='login')
+def editMessage(request, pk):
+  message = Message.objects.get(id=pk)
+
+  if request.user != message.user:
+    return HttpResponse('You are not alllowed here!!')
+
+  # TODO: Redirect back to same room.
+  if request.method == 'POST':
+    message.delete()
+    return redirect(reverse('room', args=[message.room.id]))
+  
+  context = {'obj': message}
   return render(request, 'base/delete.html', context)
 
 
